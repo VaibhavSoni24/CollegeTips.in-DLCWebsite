@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - Digital Literacy Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Digital Literacy Course</h1>
+                <p class="tagline">Empowering Digital Literacy!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="{{ url_for('tutorials') }}" class="active"><i class="fas fa-book"></i> Tutorials</a></li>
+                    <li><a href="{{ url_for('digibot') }}"><i class="fas fa-robot"></i> DigiBot</a></li>
+                    <li><a href="{{ url_for('feedback') }}"><i class="fas fa-comment"></i> Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="accessibility-controls">
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <div class="font-size-controls">
+                    <button id="font-decrease">A-</button>
+                    <button id="font-reset">A</button>
+                    <button id="font-increase">A+</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tutorials Hero -->
+    <section class="page-hero tutorials-hero">
+        <div class="container">
+            <h2>Digital Literacy Tutorials</h2>
+            <p>Step-by-step guides to help you master everyday apps and digital tools</p>
+        </div>
+    </section>
+
+    <!-- Tutorial Categories -->
+    <section class="tutorial-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Tutorials</button>
+                <button class="filter-btn" data-filter="communication">Communication</button>
+                <button class="filter-btn" data-filter="payments">Payments</button>
+                <button class="filter-btn" data-filter="navigation">Navigation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Grid -->
+    <section class="tutorials-grid">
+        <div class="container">
+            <div class="tutorials">
+                <!-- WhatsApp Tutorial -->
+                <div class="tutorial-card" data-category="communication" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Using WhatsApp</h3>
+                        <p>Learn how to send messages, make calls, and share photos</p>
+                        <div class="tutorial-steps">
+                            <h4>Getting Started with WhatsApp</h4>
+                            <ol>
+                                <li>Download WhatsApp from the App Store (iPhone) or Play Store (Android)</li>
+                                <li>Open the app and verify your phone number</li>
+                                <li>Set up your profile with a name and photo (optional)</li>
+                                <li>Find contacts who use WhatsApp from your phone contacts</li>
+                            </ol>
+                            
+                            <h4>Sending Messages and Making Calls</h4>
+                            <ol>
+                                <li>Tap on a contact to open a chat</li>
+                                <li>Type your message in the text field at the bottom</li>
+                                <li>Press the paper airplane icon to send</li>
+                                <li>For calls, tap the phone icon (voice) or video icon (video call)</li>
+                            </ol>
+                            
+                            <h4>Sharing Photos and Media</h4>
+                            <ol>
+                                <li>In a chat, tap the + or paperclip icon</li>
+                                <li>Select Camera or Gallery/Photos</li>
+                                <li>Choose the image you want to share</li>
+                                <li>Add a caption if desired, then send</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paytm Tutorial -->
+                <div class="tutorial-card" data-category="payments" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Using Paytm</h3>
+                        <p>Learn how to make digital payments and money transfers</p>
+                        <div class="tutorial-steps">
+                            <h4>Getting Started with Paytm</h4>
+                            <ol>
+                                <li>Download Paytm from the App Store or Play Store</li>
+                                <li>Register using your mobile number</li>
+                                <li>Complete KYC verification for full access</li>
+                                <li>Link your bank account or add money to Paytm wallet</li>
+                            </ol>
+                            
+                            <h4>Making Payments</h4>
+                            <ol>
+                                <li>Tap "Pay" on the home screen</li>
+                                <li>Scan QR code or enter mobile number/UPI ID</li>
+                                <li>Enter amount to pay</li>
+                                <li>Confirm payment with PIN or biometric authentication</li>
+                            </ol>
+                            
+                            <h4>Checking Transaction History</h4>
+                            <ol>
+                                <li>Go to the Paytm home screen</li>
+                                <li>Tap "Passbook" or "Transaction History"</li>
+                                <li>View all your recent transactions</li>
+                                <li>Tap on any transaction for more details</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Tutorial -->
+                <div class="tutorial-card" data-category="navigation" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Using Google Maps</h3>
+                        <p>Learn how to navigate and find places using Google Maps</p>
+                        <div class="tutorial-steps">
+                            <h4>Getting Started with Google Maps</h4>
+                            <ol>
+                                <li>Open Google Maps app on your phone</li>
+                                <li>Allow location access when prompted</li>
+                                <li>The blue dot shows your current location</li>
+                                <li>Use two fingers to zoom in/out and one finger to move the map</li>
+                            </ol>
+                            
+                            <h4>Finding Directions</h4>
+                            <ol>
+                                <li>Tap the blue "Directions" button</li>
+                                <li>Your current location will be set as starting point</li>
+                                <li>Enter your destination in the "Where to?" box</li>
+                                <li>Choose your mode of transport (car, walking, public transport)</li>
+                                <li>Tap "Start" to begin navigation</li>
+                            </ol>
+                            
+                            <h4>Finding Nearby Places</h4>
+                            <ol>
+                                <li>Tap the "Explore" tab at the bottom</li>
+                                <li>Browse categories like Restaurants, ATMs, Hospitals, etc.</li>
+                                <li>Tap on any place to see details, hours, reviews</li>
+                                <li>Use the search bar at the top for specific places</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gmail Tutorial -->
+                <div class="tutorial-card" data-category="communication" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Using Gmail</h3>
+                        <p>Learn how to send, receive, and organize emails</p>
+                        <div class="tutorial-steps">
+                            <h4>Getting Started with Gmail</h4>
+                            <ol>
+                                <li>Open the Gmail app on your phone</li>
+                                <li>Sign in with your Google account</li>
+                                <li>If you don't have an account, tap "Create account"</li>
+                                <li>Follow the prompts to set up your new email address</li>
+                            </ol>
+                            
+                            <h4>Sending an Email</h4>
+                            <ol>
+                                <li>Tap the compose button (+ or pencil icon)</li>
+                                <li>Enter recipient's email address in "To" field</li>
+                                <li>Add a subject and write your message</li>
+                                <li>Tap the paper airplane icon to send</li>
+                            </ol>
+                            
+                            <h4>Reading and Replying to Emails</h4>
+                            <ol>
+                                <li>Tap on any email in your inbox to open it</li>
+                                <li>To reply, tap the reply arrow at the bottom</li>
+                                <li>Type your response and tap send</li>
+                                <li>To forward, tap the forward arrow instead</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPI Payments Tutorial -->
+                <div class="tutorial-card" data-category="payments" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Using UPI Payments</h3>
+                        <p>Learn how to use UPI for quick money transfers</p>
+                        <div class="tutorial-steps">
+                            <h4>Understanding UPI</h4>
+                            <ol>
+                                <li>UPI (Unified Payments Interface) connects your bank account directly to payment apps</li>
+                                <li>You can use apps like Google Pay, PhonePe, or BHIM</li>
+                                <li>Money moves directly between bank accounts without wallet balance</li>
+                                <li>It's secure, instant, and works 24/7</li>
+                            </ol>
+                            
+                            <h4>Setting Up UPI</h4>
+                            <ol>
+                                <li>Download a UPI app (Google Pay, PhonePe, etc.)</li>
+                                <li>Register with your mobile number (should be linked to your bank)</li>
+                                <li>Select your bank from the list</li>
+                                <li>Create a UPI PIN for secure transactions</li>
+                            </ol>
+                            
+                            <h4>Making UPI Payments</h4>
+                            <ol>
+                                <li>Open your UPI app</li>
+                                <li>Choose "Pay" or "Send Money"</li>
+                                <li>Enter mobile number/UPI ID or scan QR code</li>
+                                <li>Enter amount and note (optional)</li>
+                                <li>Confirm with UPI PIN</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Calling Tutorial -->
+                <div class="tutorial-card" data-category="communication" data-animate="fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Video Calling</h3>
+                        <p>Learn how to make video calls with different apps</p>
+                        <div class="tutorial-steps">
+                            <h4>Making Video Calls with WhatsApp</h4>
+                            <ol>
+                                <li>Open WhatsApp and go to your chat with the person</li>
+                                <li>Tap the video camera icon in the top right corner</li>
+                                <li>Wait for the other person to answer</li>
+                                <li>To end the call, tap the red phone icon</li>
+                            </ol>
+                            
+                            <h4>Using Google Meet</h4>
+                            <ol>
+                                <li>Download and open the Google Meet app</li>
+                                <li>Sign in with your Google account</li>
+                                <li>Tap "New meeting" or enter a meeting code</li>
+                                <li>Tap "Join meeting" to start or join a call</li>
+                            </ol>
+                            
+                            <h4>Tips for Better Video Calls</h4>
+                            <ol>
+                                <li>Find a quiet place with good lighting</li>
+                                <li>Connect to WiFi for better quality</li>
+                                <li>Position your phone so the camera is at eye level</li>
+                                <li>Mute yourself when not speaking in group calls</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Need More Help -->
+    <section class="more-help">
+        <div class="container">
+            <h2>Need more personalized help?</h2>
+            <p>Our DigiBot assistant can answer your specific questions about digital tools.</p>
+            <a href="{{ url_for('digibot') }}" class="btn">Chat with DigiBot</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Digital Literacy Course - CollegeTips.in. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

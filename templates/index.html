@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Literacy Course - CollegeTips.in</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Digital Literacy Course</h1>
+                <p class="tagline">Empowering Digital Literacy!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="{{ url_for('tutorials') }}"><i class="fas fa-book"></i> Tutorials</a></li>
+                    <li><a href="{{ url_for('digibot') }}"><i class="fas fa-robot"></i> DigiBot</a></li>
+                    <li><a href="{{ url_for('feedback') }}"><i class="fas fa-comment"></i> Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="accessibility-controls">
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+                <div class="font-size-controls">
+                    <button id="font-decrease">A-</button>
+                    <button id="font-reset">A</button>
+                    <button id="font-increase">A+</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Digital Literacy Course</h2>
+                <p>Learn to navigate the digital world with confidence!</p>
+                <a href="{{ url_for('tutorials') }}" class="btn">Start Learning Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in">
+                <h2>About CollegeTips.in</h2>
+            </div>
+            <div class="about-content" data-animate="slide-up">
+                <div class="about-image">
+                    <i class="fas fa-graduation-cap fa-5x"></i>
+                </div>
+                <div class="about-text">
+                    <p>CollegeTips.in is dedicated to empowering individuals with the knowledge and skills they need to succeed in today's digital world. We provide resources, guidance, and support to help you navigate your digital journey with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DLC Program Section -->
+    <section class="dlc-program">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in">
+                <h2>About the DLC Program</h2>
+            </div>
+            <div class="program-content" data-animate="slide-up">
+                <div class="program-text">
+                    <p>The Digital Literacy Course (DLC) is designed specifically for parents and elderly users who want to learn how to use digital tools with ease. Our step-by-step tutorials, friendly chatbot, and accessible design make learning technology simple and enjoyable.</p>
+                </div>
+                <div class="program-features">
+                    <div class="feature">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Easy Tutorials</h3>
+                        <p>Step-by-step guides for popular apps</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <h3>DigiBot Assistant</h3>
+                        <p>Ask questions and get instant help</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-universal-access"></i>
+                        <h3>Accessibility</h3>
+                        <p>Adjustable text size and contrast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to start your digital journey?</h2>
+            <p>Explore our tutorials or chat with DigiBot for personalized help.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('tutorials') }}" class="btn">Browse Tutorials</a>
+                <a href="{{ url_for('digibot') }}" class="btn btn-outline">Try DigiBot</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Digital Literacy Course - CollegeTips.in. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
